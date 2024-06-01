@@ -36,4 +36,4 @@ Eliminacion de producto basado en su ID de MongoDB
 <img src="./media/EliminacionProductoxID.JPG"/>
 
 Despliegue del proyecto en Render para visualización
-Link:
+Link: https://m6-aplicacion-backend-autenticacion.onrender.com
