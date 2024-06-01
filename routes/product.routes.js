@@ -1,11 +1,16 @@
 //Importación de librerias necesarias
 const { Router } = require("express");
 const router = Router(); //Creacion de un router Express
+const authMiddleware = require("../middleware/authorization");
 
 //Importamos el controlador de los productos
 const productController = require("../controllers/product.controller");
 
-router.post("/api/product/create", productController.productPostCreate); //Para controlador sobre crear un producto
+router.post(
+  "/api/product/create",
+  authMiddleware,
+  productController.productPostCreate
+); //Para controlador sobre crear un producto
 
 router.get("/api/product/readall", productController.productGetAll); //Asociamos el controlador de obtener la lista de productos
 
