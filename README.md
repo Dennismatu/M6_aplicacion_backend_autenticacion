@@ -15,7 +15,25 @@ Las validaciones del correcto funcionamiento fueron enviadas en Postman obtenien
 
 <h3>Users</h3>
 
+Creacion de usuario
+<img src="./media/RegistroUsuario.JPG"/>
+
+Login de usuario
+<img src="./media/LoginUsuario.JPG"/>
+
+Actualizacion de usuario
+<img src="./media/ActualizacionUsuario.JPG"/>
+
 <h3>Products</h3>
+
+Creacion de producto
+<img src="./media/CreacionProducto.JPG"/>
+
+Listado de productos
+<img src="./media/ListadoProductos.JPG"/>
+
+Eliminacion de producto basado en su ID de MongoDB
+<img src="./media/EliminacionProductoxID.JPG"/>
 
 Despliegue del proyecto en Render para visualización
 Link:
