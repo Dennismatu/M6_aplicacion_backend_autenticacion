@@ -31,6 +31,12 @@ const ProductSchema = Schema(
       type: Number,
       required: [true, "Precio del vehiculo"],
     },
+
+    //Se añade disponibilidad de productos para muestra en e-commerce
+    availability: {
+      type: Number,
+      required: [true, "Disponibilidad"],
+    },
   },
   { versionKey: false }
 );
