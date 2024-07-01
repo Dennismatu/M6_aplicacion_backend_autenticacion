@@ -8,12 +8,13 @@ const userGetToken = (req = request, res = response) => {
 };
 
 const userPostRegister = async (req = request, res = response) => {
-  const { name, email, password } = req.body;
+  const { name, last_name, email, password } = req.body;
   const salt = await bcryptjs.genSalt(10); //Crea una algo dificil para la contraseña.
   const hashedPassword = await bcryptjs.hash(password, salt);
 
   let user = new UserModel({
     name: name,
+    last_name: last_name,
     email: email,
     password: hashedPassword,
   });
@@ -40,7 +41,12 @@ const userPostLogin = async (req = request, res = response) => {
     }
     // si todo es correcto, generamos un json web token
     // 1. el 'payload' será un objeto que contendrá el id del usuario
-    const payload = { user: { id: foundUser.id } };
+    const payload = {
+      user: {
+        id: foundUser.id,
+        full_name: foundUser.name + " " + foundUser.last_name,
+      },
+    };
     // 2. firma del jwt
     jwt.sign(
       payload,
